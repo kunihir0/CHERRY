@@ -1,0 +1,34 @@
+<script setup lang="ts">
+defineOptions({
+  name: "Tools",
+});
+
+const router = useRouter();
+
+const ElectricCalculator = () => {
+  router.push({
+    name: "Electric",
+  });
+};
+</script>
+
+<template>
+  <div class="hero mt-[-4rem] min-h-screen text-primary-content">
+    <div
+      class="hero-overlay place-items-center bg-gradient-to-bl from-primary to-base-100"
+    />
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-5xl font-bold">
+          TOOLS
+        </h1>
+
+        <button class="btn-primary btn" @click="ElectricCalculator">
+          Electic Calculator
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped></style>
