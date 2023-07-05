@@ -23,7 +23,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="max-w-screen-md mx-175 p-4">
+  <div class="max-w-screen-md mx-auto p-4">
     <h1 class="text-2xl font-bold mb-4">
       Electricity Cost Calculator
     </h1>
@@ -84,53 +84,58 @@ onMounted(() => {
         <h2 class="card-title">
           Devices
         </h2>
-        <table class="table w-full table-compact table-zebra">
-          <thead>
-            <tr>
-              <th>Select</th>
-              <th>Device Name</th>
-              <th>Power (W)</th>
-              <th>Hours/day</th>
-              <th>Cost/kWh</th>
-              <th>Cost/day</th>
-              <th>Cost/week</th>
-              <th>Cost/month</th>
-              <th>Cost/half year</th>
-              <th>Cost/year</th>
-              <th />
-            </tr>
-          </thead>
+        <div class="overflow-x-auto">
+          <table class="table w-full table-compact table-zebra">
+            <thead>
+              <tr>
+                <th>Select</th>
+                <th>Device Name</th>
+                <th>Power (W)</th>
+                <th>Hours/day</th>
+                <th>Cost/kWh</th>
+                <th>Cost/day</th>
+                <th>Cost/week</th>
+                <th>Cost/month</th>
+                <th>Cost/half year</th>
+                <th>Cost/year</th>
+                <th />
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr v-for="(device, index) in appstore.useElectricStore.devices" :key="index">
-              <td>
-                <label>
-                  <input type="checkbox" class="checkbox" @click="appstore.useElectricStore.toggleDeviceSelection(index)">
-                </label>
-              </td>
-              <td>{{ device.name }}</td>
-              <td>{{ device.power }}</td>
-              <td>{{ device.hours }}</td>
-              <td>${{ appstore.useElectricStore.costPerKWh }}</td>
-              <td v-for="col in cols" :key="col.label">
-                ${{ col.value(device) }}
-              </td>
-              <td>
-                <button class="btn btn-xs btn-error" @click="appstore.useElectricStore.removeDevice(index)">
-                  Remove
-                </button>
-              </td>
-            </tr>
-            <tr v-for="row in rows" :key="row.label">
-              <td colSpan="4">
-                {{ row.label }}
-              </td>
-              <td colSpan="6">
-                ${{ row.value }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
+            <tbody>
+              <tr v-for="(device, index) in appstore.useElectricStore.devices" :key="index">
+                <td>
+                  <label>
+                    <input type="checkbox" class="checkbox" @click="appstore.useElectricStore.toggleDeviceSelection(index)">
+                  </label>
+                </td>
+                <td>{{ device.name }}</td>
+                <td>{{ device.power }}</td>
+                <td>{{ device.hours }}</td>
+                <td>${{ appstore.useElectricStore.costPerKWh }}</td>
+                <td v-for="col in cols" :key="col.label">
+                  ${{ col.value(device) }}
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-error" @click="appstore.useElectricStore.removeDevice(index)">
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title">
+              Total Costs
+            </h2>
+            <div v-for="row in rows" :key="row.label" class="flex justify-between my-2">
+              <div>{{ row.label }}</div>
+              <div>${{ row.value }}</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
