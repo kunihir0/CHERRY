@@ -1,5 +1,6 @@
 import { counter } from "./counter";
 import { useElectricStore } from "./eletric";
+import { useCannabisStore } from "./cannabis";
 
 const appStore: any = {};
 
@@ -9,6 +10,7 @@ const appStore: any = {};
 export const registerStore = () => {
   appStore.counter = counter();
   appStore.useElectricStore = useElectricStore();
+  appStore.useCannabisStore = useCannabisStore();
 };
 
 export default appStore;

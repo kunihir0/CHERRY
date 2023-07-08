@@ -26,6 +26,15 @@ const ElectricCalculator = () => {
         <button class="btn-primary btn" @click="ElectricCalculator">
           Electic Calculator
         </button>
+        <div class="divider" />
+        <div class="indicator">
+          <span class="indicator-item badge">new</span>
+          <RouterLink to="/tools/cannabis">
+            <button class="btn-primary btn">
+              Cannabis Calculator
+            </button>
+          </RouterLink>
+        </div>
       </div>
     </div>
   </div>

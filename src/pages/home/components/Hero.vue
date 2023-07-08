@@ -21,17 +21,21 @@ const testStore = () => {
         <p class="mb-5">
           HOME OF THE TOOLS FOR TURTLE
         </p>
-        <img src="../../../assets/avatar.jpg" width="250" height="250" class="border border-amber rounded">
-        <br>
-        <button class="btn-primary btn" @click="testStore">
-          Test Store
-        </button>
+        <img src="../../../assets/1.jpg" width="250" height="250" class="mask mask-heart border border-amber rounded">
 
-        <RouterLink to="/tools">
-          <button class="btn-primary btn">
-            Tools
+        <div class="flex flex-col w-full border-opacity-50">
+          <button class="btn-primary btn" @click="testStore">
+            Test Store
           </button>
-        </RouterLink>
+          <div class="divider">
+            OR
+          </div>
+          <RouterLink to="/tools">
+            <button class="btn-primary btn">
+              Tools
+            </button>
+          </RouterLink>
+        </div>
       </div>
     </div>
   </div>

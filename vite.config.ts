@@ -20,7 +20,14 @@ export default defineConfig({
     port: 8888,
     open: true,
     https: false,
-    proxy: {},
+    proxy: {
+      "/api": {
+        target: "https://rustlabs.com",
+        changeOrigin: true,
+        secure: false,
+        rewrite: path => path.replace(/^\/api/, ""),
+      },
+    },
   },
   plugins: [
     Vue(

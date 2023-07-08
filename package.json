@@ -30,6 +30,8 @@
     "@kirklin/logger": "^0.0.2",
     "@kirklin/reset-css": "^0.0.3",
     "@vueuse/core": "^10.1.2",
+    "axios": "^1.4.0",
+    "cheerio": "1.0.0-rc.12",
     "daisyui": "^3.1.0",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.4",

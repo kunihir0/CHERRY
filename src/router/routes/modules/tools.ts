@@ -5,10 +5,16 @@ const tools = [{
   meta: {
     title: "Tools",
   },
-}, {
+},
+{
   path: "/tools/electric",
   name: "Electric",
   component: () => import("~/pages/tools/electric.vue"),
+},
+{
+  path: "/tools/cannabis",
+  name: "Cannabis",
+  component: () => import("~/pages/tools/cannabis.vue"),
 },
 ];
 

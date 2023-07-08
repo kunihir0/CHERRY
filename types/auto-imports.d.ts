@@ -228,6 +228,7 @@ declare global {
   const useResizeObserver: typeof import('@vueuse/core')['useResizeObserver']
   const useRoute: typeof import('vue-router')['useRoute']
   const useRouter: typeof import('vue-router')['useRouter']
+  const useRustStore: typeof import('../src/store/rust')['useRustStore']
   const useScreenOrientation: typeof import('@vueuse/core')['useScreenOrientation']
   const useScreenSafeArea: typeof import('@vueuse/core')['useScreenSafeArea']
   const useScriptTag: typeof import('@vueuse/core')['useScriptTag']
