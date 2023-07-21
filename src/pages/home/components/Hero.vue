@@ -35,6 +35,11 @@ const testStore = () => {
               Tools
             </button>
           </RouterLink>
+          <RouterLink to="/user">
+            <button class="btn-primary btn">
+              User
+            </button>
+          </RouterLink>
         </div>
       </div>
     </div>
