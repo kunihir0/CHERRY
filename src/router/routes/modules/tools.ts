@@ -16,6 +16,11 @@ const tools = [{
   name: "Cannabis",
   component: () => import("~/pages/tools/cannabis.vue"),
 },
+{
+  path: "/tools/mortgage",
+  name: "Mortgage",
+  component: () => import("~/pages/tools/mortgage.vue"),
+},
 ];
 
 export default tools;
