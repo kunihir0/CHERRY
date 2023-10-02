@@ -1,5 +1,5 @@
 <div align='center'>
-<img src='README.assets/logo.png' alt='Vite-Boot - Opinionated Vite Starter Template' width='344'/>
+<img src='README.assets/logo.png' width='344'/>
 <h1>CHERRY </h1>
 </div>
 

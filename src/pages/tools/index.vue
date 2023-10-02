@@ -28,10 +28,17 @@ const ElectricCalculator = () => {
         </button>
         <div class="divider" />
         <div class="indicator">
-          <span class="indicator-item badge">new</span>
           <RouterLink to="/tools/cannabis">
             <button class="btn-primary btn">
               Cannabis Calculator
+            </button>
+          </RouterLink>
+        </div>
+        <div class="indicator">
+          <span class="indicator-item badge">new</span>
+          <RouterLink to="/tools/mortgage">
+            <button class="btn-primary btn">
+              Mortgage Calculator
             </button>
           </RouterLink>
         </div>
